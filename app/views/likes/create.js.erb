@@ -1,0 +1,5 @@
+var current_likes = $("#<%= dom_id(@like.photo) %>_likes");
+
+var updated_likes = $("<%= j(render "photos/likes", photo: @like.photo) %>");
+
+current_likes.replaceWith(updated_likes)
